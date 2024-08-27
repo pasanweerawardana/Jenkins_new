@@ -72,7 +72,7 @@ post {
             def log = currentBuild.rawBuild.getLog(50).join('\n') // Gets the last 50 lines of the log
             mail to: "pasanm16@gmail.com",
                  subject: "Build Status Email - Success",
-                 body: "Build was successful!\n\nHere are the last 50 lines of the log:\n${log}"
+                 body: "Build was successful! Changes are made here \n\nHere are the last 50 lines of the log:\n${log}"
         }
     }
     failure {
